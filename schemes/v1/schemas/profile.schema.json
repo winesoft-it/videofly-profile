@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "video-profile/v1/schemas/profile.schema.json",
+  "title": "Video Profile",
+  "description": "VideoFly 클라이언트가 선택하는 video profile 정의. 하나의 profile은 하나 이상의 rendition을 포함한다.",
+  "type": "object",
+  "required": ["name", "renditions"],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "v1",
+      "description": "video profile 스키마 버전."
+    },
+    "name": {
+      "type": "string",
+      "pattern": "^_?[a-z0-9][a-z0-9_.-]*$",
+      "description": "profile을 식별하는 고유 이름. VideoFly 기본 profile은 '_'로 시작한다. 예: _default, youtube, balanced."
+    },
+    "description": {
+      "type": "string",
+      "description": "profile 설명."
+    },
+    "renditions": {
+      "type": "array",
+      "minItems": 1,
+      "description": "profile에 포함되는 rendition 목록. 배열 순서는 master.m3u8 variant 출력 순서로 사용할 수 있다.",
+      "items": {
+        "$ref": "rendition.schema.json"
+      }
+    }
+  },
+  "additionalProperties": false
+}
