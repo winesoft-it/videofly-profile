@@ -6,12 +6,27 @@
     {
       "name": "fmp4_1440p",
       "container": "fmp4",
-      "audio": { "codec": "aac", "codec_options": { "profile": "aac_low" }, "channels": 2 },
+      "audio": {
+        "codec": "aac",
+        "codec_options": {
+          "profile": "aac_low"
+        },
+        "channels": 2
+      },
       "video": {
         "codec": "av1",
-        "gpu": { "preset": "p3", "quality": 35 },
-        "cpu": { "preset": "9", "quality": 26 },
-        "codec_options": { "profile": "main", "level": "5.0" },
+        "gpu": {
+          "preset": "p3",
+          "quality": 35
+        },
+        "cpu": {
+          "preset": "9",
+          "quality": 26
+        },
+        "codec_options": {
+          "profile": "main",
+          "level": "5.0"
+        },
         "resolution": "2560x1440",
         "max_frame_rate": 30
       }
@@ -19,12 +34,27 @@
     {
       "name": "fmp4_1080p60",
       "container": "fmp4",
-      "audio": { "codec": "aac", "codec_options": { "profile": "aac_low" }, "channels": 2 },
+      "audio": {
+        "codec": "aac",
+        "codec_options": {
+          "profile": "aac_low"
+        },
+        "channels": 2
+      },
       "video": {
         "codec": "av1",
-        "gpu": { "preset": "p4", "quality": 35 },
-        "cpu": { "preset": "8", "quality": 26 },
-        "codec_options": { "profile": "main", "level": "4.2" },
+        "gpu": {
+          "preset": "p4",
+          "quality": 35
+        },
+        "cpu": {
+          "preset": "8",
+          "quality": 26
+        },
+        "codec_options": {
+          "profile": "main",
+          "level": "4.2"
+        },
         "resolution": "1920x1080",
         "max_frame_rate": 60
       }
@@ -32,12 +62,27 @@
     {
       "name": "fmp4_1080p",
       "container": "fmp4",
-      "audio": { "codec": "aac", "codec_options": { "profile": "aac_low" }, "channels": 2 },
+      "audio": {
+        "codec": "aac",
+        "codec_options": {
+          "profile": "aac_low"
+        },
+        "channels": 2
+      },
       "video": {
         "codec": "av1",
-        "gpu": { "preset": "p3", "quality": 38 },
-        "cpu": { "preset": "9", "quality": 28 },
-        "codec_options": { "profile": "main", "level": "4.0" },
+        "gpu": {
+          "preset": "p3",
+          "quality": 38
+        },
+        "cpu": {
+          "preset": "9",
+          "quality": 28
+        },
+        "codec_options": {
+          "profile": "main",
+          "level": "4.0"
+        },
         "resolution": "1920x1080",
         "max_frame_rate": 30
       }
@@ -45,12 +90,27 @@
     {
       "name": "fmp4_720p60",
       "container": "fmp4",
-      "audio": { "codec": "aac", "codec_options": { "profile": "aac_low" }, "channels": 2 },
+      "audio": {
+        "codec": "aac",
+        "codec_options": {
+          "profile": "aac_low"
+        },
+        "channels": 2
+      },
       "video": {
         "codec": "av1",
-        "gpu": { "preset": "p4", "quality": 36 },
-        "cpu": { "preset": "8", "quality": 28 },
-        "codec_options": { "profile": "main", "level": "3.2" },
+        "gpu": {
+          "preset": "p4",
+          "quality": 36
+        },
+        "cpu": {
+          "preset": "8",
+          "quality": 28
+        },
+        "codec_options": {
+          "profile": "main",
+          "level": "3.2"
+        },
         "resolution": "1280x720",
         "max_frame_rate": 60
       }
@@ -58,12 +118,27 @@
     {
       "name": "fmp4_720p",
       "container": "fmp4",
-      "audio": { "codec": "aac", "codec_options": { "profile": "aac_low" }, "channels": 2 },
+      "audio": {
+        "codec": "aac",
+        "codec_options": {
+          "profile": "aac_low"
+        },
+        "channels": 2
+      },
       "video": {
         "codec": "av1",
-        "gpu": { "preset": "p3", "quality": 38 },
-        "cpu": { "preset": "9", "quality": 30 },
-        "codec_options": { "profile": "main", "level": "3.1" },
+        "gpu": {
+          "preset": "p3",
+          "quality": 38
+        },
+        "cpu": {
+          "preset": "9",
+          "quality": 30
+        },
+        "codec_options": {
+          "profile": "main",
+          "level": "3.1"
+        },
         "resolution": "1280x720",
         "max_frame_rate": 30
       }
@@ -71,12 +146,27 @@
     {
       "name": "fmp4_480p",
       "container": "fmp4",
-      "audio": { "codec": "aac", "codec_options": { "profile": "aac_low" }, "channels": 2 },
+      "audio": {
+        "codec": "aac",
+        "codec_options": {
+          "profile": "aac_low"
+        },
+        "channels": 2
+      },
       "video": {
         "codec": "av1",
-        "gpu": { "preset": "p3", "quality": 40 },
-        "cpu": { "preset": "9", "quality": 32 },
-        "codec_options": { "profile": "main", "level": "3.0" },
+        "gpu": {
+          "preset": "p3",
+          "quality": 40
+        },
+        "cpu": {
+          "preset": "9",
+          "quality": 32
+        },
+        "codec_options": {
+          "profile": "main",
+          "level": "3.0"
+        },
         "resolution": "854x480",
         "max_frame_rate": 30
       }
@@ -84,12 +174,27 @@
     {
       "name": "fmp4_360p",
       "container": "fmp4",
-      "audio": { "codec": "aac", "codec_options": { "profile": "aac_low" }, "channels": 2 },
+      "audio": {
+        "codec": "aac",
+        "codec_options": {
+          "profile": "aac_low"
+        },
+        "channels": 2
+      },
       "video": {
         "codec": "av1",
-        "gpu": { "preset": "p3", "quality": 40 },
-        "cpu": { "preset": "9", "quality": 33 },
-        "codec_options": { "profile": "main", "level": "3.0" },
+        "gpu": {
+          "preset": "p3",
+          "quality": 40
+        },
+        "cpu": {
+          "preset": "9",
+          "quality": 33
+        },
+        "codec_options": {
+          "profile": "main",
+          "level": "3.0"
+        },
         "resolution": "640x360",
         "max_frame_rate": 30
       }
@@ -97,12 +202,27 @@
     {
       "name": "fmp4_240p",
       "container": "fmp4",
-      "audio": { "codec": "aac", "codec_options": { "profile": "aac_low" }, "channels": 2 },
+      "audio": {
+        "codec": "aac",
+        "codec_options": {
+          "profile": "aac_low"
+        },
+        "channels": 2
+      },
       "video": {
         "codec": "av1",
-        "gpu": { "preset": "p3", "quality": 40 },
-        "cpu": { "preset": "9", "quality": 35 },
-        "codec_options": { "profile": "main", "level": "2.1" },
+        "gpu": {
+          "preset": "p3",
+          "quality": 40
+        },
+        "cpu": {
+          "preset": "9",
+          "quality": 35
+        },
+        "codec_options": {
+          "profile": "main",
+          "level": "2.1"
+        },
         "resolution": "426x240",
         "max_frame_rate": 30
       }
@@ -110,12 +230,27 @@
     {
       "name": "fmp4_144p",
       "container": "fmp4",
-      "audio": { "codec": "aac", "codec_options": { "profile": "aac_low" }, "channels": 2 },
+      "audio": {
+        "codec": "aac",
+        "codec_options": {
+          "profile": "aac_low"
+        },
+        "channels": 2
+      },
       "video": {
         "codec": "av1",
-        "gpu": { "preset": "p3", "quality": 38 },
-        "cpu": { "preset": "9", "quality": 37 },
-        "codec_options": { "profile": "main", "level": "2.0" },
+        "gpu": {
+          "preset": "p3",
+          "quality": 38
+        },
+        "cpu": {
+          "preset": "9",
+          "quality": 37
+        },
+        "codec_options": {
+          "profile": "main",
+          "level": "2.0"
+        },
         "resolution": "256x144",
         "max_frame_rate": 30
       }
@@ -123,12 +258,25 @@
     {
       "name": "m2ts_1080p60",
       "container": "m2ts",
-      "audio": { "codec": "aac", "codec_options": { "profile": "aac_low" }, "channels": 2 },
+      "audio": {
+        "codec": "aac",
+        "codec_options": {
+          "profile": "aac_low"
+        },
+        "channels": 2
+      },
       "video": {
         "codec": "h264",
-        "gpu": { "quality": 28 },
-        "cpu": { "quality": 20 },
-        "codec_options": { "profile": "high", "level": "4.2" },
+        "gpu": {
+          "quality": 28
+        },
+        "cpu": {
+          "quality": 20
+        },
+        "codec_options": {
+          "profile": "high",
+          "level": "4.2"
+        },
         "resolution": "1920x1080",
         "max_frame_rate": 60
       }
@@ -136,12 +284,25 @@
     {
       "name": "m2ts_1080p",
       "container": "m2ts",
-      "audio": { "codec": "aac", "codec_options": { "profile": "aac_low" }, "channels": 2 },
+      "audio": {
+        "codec": "aac",
+        "codec_options": {
+          "profile": "aac_low"
+        },
+        "channels": 2
+      },
       "video": {
         "codec": "h264",
-        "gpu": { "quality": 35 },
-        "cpu": { "quality": 23 },
-        "codec_options": { "profile": "high", "level": "4.0" },
+        "gpu": {
+          "quality": 35
+        },
+        "cpu": {
+          "quality": 23
+        },
+        "codec_options": {
+          "profile": "high",
+          "level": "4.0"
+        },
         "resolution": "1920x1080",
         "max_frame_rate": 30
       }
@@ -149,12 +310,25 @@
     {
       "name": "m2ts_720p60",
       "container": "m2ts",
-      "audio": { "codec": "aac", "codec_options": { "profile": "aac_low" }, "channels": 2 },
+      "audio": {
+        "codec": "aac",
+        "codec_options": {
+          "profile": "aac_low"
+        },
+        "channels": 2
+      },
       "video": {
         "codec": "h264",
-        "gpu": { "quality": 28 },
-        "cpu": { "quality": 20 },
-        "codec_options": { "profile": "high", "level": "3.2" },
+        "gpu": {
+          "quality": 28
+        },
+        "cpu": {
+          "quality": 20
+        },
+        "codec_options": {
+          "profile": "high",
+          "level": "3.2"
+        },
         "resolution": "1280x720",
         "max_frame_rate": 60
       }
@@ -162,12 +336,25 @@
     {
       "name": "m2ts_720p",
       "container": "m2ts",
-      "audio": { "codec": "aac", "codec_options": { "profile": "aac_low" }, "channels": 2 },
+      "audio": {
+        "codec": "aac",
+        "codec_options": {
+          "profile": "aac_low"
+        },
+        "channels": 2
+      },
       "video": {
         "codec": "h264",
-        "gpu": { "quality": 35 },
-        "cpu": { "quality": 23 },
-        "codec_options": { "profile": "main", "level": "3.1" },
+        "gpu": {
+          "quality": 35
+        },
+        "cpu": {
+          "quality": 23
+        },
+        "codec_options": {
+          "profile": "main",
+          "level": "3.1"
+        },
         "resolution": "1280x720",
         "max_frame_rate": 30
       }
@@ -175,12 +362,25 @@
     {
       "name": "m2ts_480p",
       "container": "m2ts",
-      "audio": { "codec": "aac", "codec_options": { "profile": "aac_low" }, "channels": 2 },
+      "audio": {
+        "codec": "aac",
+        "codec_options": {
+          "profile": "aac_low"
+        },
+        "channels": 2
+      },
       "video": {
         "codec": "h264",
-        "gpu": { "quality": 35 },
-        "cpu": { "quality": 23 },
-        "codec_options": { "profile": "main", "level": "3.0" },
+        "gpu": {
+          "quality": 35
+        },
+        "cpu": {
+          "quality": 23
+        },
+        "codec_options": {
+          "profile": "main",
+          "level": "3.0"
+        },
         "resolution": "854x480",
         "max_frame_rate": 30
       }
@@ -188,12 +388,25 @@
     {
       "name": "m2ts_360p",
       "container": "m2ts",
-      "audio": { "codec": "aac", "codec_options": { "profile": "aac_low" }, "channels": 2 },
+      "audio": {
+        "codec": "aac",
+        "codec_options": {
+          "profile": "aac_low"
+        },
+        "channels": 2
+      },
       "video": {
         "codec": "h264",
-        "gpu": { "quality": 33 },
-        "cpu": { "quality": 23 },
-        "codec_options": { "profile": "baseline", "level": "3.0" },
+        "gpu": {
+          "quality": 33
+        },
+        "cpu": {
+          "quality": 23
+        },
+        "codec_options": {
+          "profile": "baseline",
+          "level": "3.0"
+        },
         "resolution": "640x360",
         "max_frame_rate": 30
       }
@@ -201,12 +414,25 @@
     {
       "name": "m2ts_144p",
       "container": "m2ts",
-      "audio": { "codec": "aac", "codec_options": { "profile": "aac_low" }, "channels": 2 },
+      "audio": {
+        "codec": "aac",
+        "codec_options": {
+          "profile": "aac_low"
+        },
+        "channels": 2
+      },
       "video": {
         "codec": "h264",
-        "gpu": { "quality": 30 },
-        "cpu": { "quality": 23 },
-        "codec_options": { "profile": "baseline", "level": "2.0" },
+        "gpu": {
+          "quality": 30
+        },
+        "cpu": {
+          "quality": 23
+        },
+        "codec_options": {
+          "profile": "baseline",
+          "level": "2.0"
+        },
         "resolution": "256x144",
         "max_frame_rate": 30
       }
