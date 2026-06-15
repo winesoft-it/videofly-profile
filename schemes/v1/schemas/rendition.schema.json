@@ -16,6 +16,16 @@
       "enum": ["fmp4", "m2ts"],
       "description": "rendition이 제공되는 HLS 패키징 컨테이너."
     },
+    "bandwidth": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "HLS master playlist의 BANDWIDTH fallback 값(bps). 실제 산출 bandwidth를 동적으로 얻을 수 없을 때만 사용한다."
+    },
+    "score": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "description": "HLS master playlist의 EXT-X-STREAM-INF SCORE 값. 명시하면 해당 값을 우선 사용하고, 없으면 구현에서 산출한 값을 사용한다."
+    },
     "audio": {
       "type": "object",
       "properties": {

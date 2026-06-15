@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "video-profile/v1/schemas/profile.schema.json",
   "title": "Video Profile",
-  "description": "VideoFly 출력 profile 정의. 하나의 profile은 공통 생성 정책, HLS 패키징 정책, 하나 이상의 rendition 출력을 포함한다.",
+  "description": "VideoFly 출력 profile 정의. 하나의 profile은 공통 생성 정책, HLS 패키징 정책, playout 정책, 하나 이상의 rendition 출력을 포함한다.",
   "type": "object",
   "required": ["schema_version", "name", "renditions"],
   "properties": {
@@ -22,7 +22,7 @@
     },
     "rendition_policy": {
       "type": "object",
-      "description": "HLS 패키징 전에 rendition 출력을 생성할지, 어떤 조건으로 생성할지 결정하는 정책.",
+      "description": "HLS 패키징 전에 variant rendition을 포함하거나 제외할 조건을 결정하는 정책.",
       "properties": {
         "mode": {
           "type": "string",
@@ -32,11 +32,11 @@
             "if_spec_mismatch",
             "if_codec_mismatch"
           ],
-          "description": "rendition 트랜스코딩이 필요한지 판단하는 조건."
+          "description": "variant rendition 포함/제외 기준. always는 항상 variant rendition에 포함하고, if_bitrate_exceeds는 codec/resolution이 같고 bitrate가 같거나 낮으면 포함하지 않으며, if_spec_mismatch는 codec/resolution이 같으면 포함하지 않고, if_codec_mismatch는 codec이 같으면 포함하지 않는다."
         },
         "allow_upscale": {
           "type": "boolean",
-          "description": "원본보다 큰 해상도의 rendition 생성을 허용할지 여부."
+          "description": "원본보다 큰 해상도의 rendition을 variant에 포함할지 여부."
         }
       },
       "additionalProperties": false
@@ -48,7 +48,7 @@
         "version": {
           "type": "integer",
           "minimum": 1,
-          "description": "HLS playlist 버전 또는 정책 버전."
+          "description": "HLS playlist의 EXT-X-VERSION 값."
         },
         "path": {
           "type": "string",
@@ -64,6 +64,63 @@
           "type": "number",
           "exclusiveMinimum": 0,
           "description": "목표 HLS segment 길이(초)."
+        }
+      },
+      "additionalProperties": false
+    },
+    "playout": {
+      "type": "object",
+      "required": ["enable", "items"],
+      "description": "원본 앞 또는 뒤에 이미지/영상 asset을 삽입하는 출력 구성 정책.",
+      "properties": {
+        "enable": {
+          "type": "boolean",
+          "description": "playout asset 삽입 활성화 여부."
+        },
+        "items": {
+          "type": "array",
+          "minItems": 1,
+          "description": "원본 앞 또는 뒤에 삽입할 playout asset 목록. 같은 position 안에서는 배열 순서를 유지한다.",
+          "items": {
+            "type": "object",
+            "required": ["position", "source"],
+            "properties": {
+              "name": {
+                "type": "string",
+                "pattern": "^[a-z0-9][a-z0-9_.-]*$",
+                "description": "playout item을 식별하는 선택적 이름. 예: intro, slate, outro."
+              },
+              "position": {
+                "type": "string",
+                "enum": ["before", "after"],
+                "description": "asset을 원본 앞에 삽입할지 뒤에 삽입할지 결정한다."
+              },
+              "source": {
+                "type": "object",
+                "required": ["type", "uri"],
+                "description": "삽입할 원본 asset.",
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "enum": ["image", "video"],
+                    "description": "asset 종류. image는 duration만큼 정지 영상 segment로 변환하고, video는 원본 영상을 rendition 조건에 맞춰 변환한다."
+                  },
+                  "uri": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "삽입할 asset의 경로 또는 식별자."
+                  }
+                },
+                "additionalProperties": false
+              },
+              "duration": {
+                "type": "number",
+                "exclusiveMinimum": 0,
+                "description": "playout 재생 길이(초). image source에서는 필요하며, video source에서는 지정한 경우 해당 길이를 사용한다."
+              }
+            },
+            "additionalProperties": false
+          }
         }
       },
       "additionalProperties": false
