@@ -1,6 +1,6 @@
 {
   "schema_version": "v1",
-  "name": "balanced",
+  "name": "balance",
   "description": "가성비 범용 profile (general purpose). 1080p ~ 360p 4단 ABR 래더.",
   "renditions": [
     {
