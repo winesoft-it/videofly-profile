@@ -15,7 +15,8 @@ schemes/
     examples/
       profile.sample.json
     docs/
-      profile-option-mapping.md
+      ffmpeg-option-mapping.md
+      hls-output-structure.md
 ```
 
 `{version}`은 `v1`, `v2`처럼 표기합니다.
