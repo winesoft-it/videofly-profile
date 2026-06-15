@@ -84,7 +84,7 @@
               "type": "integer",
               "minimum": 1,
               "maximum": 63,
-              "description": "GPU 인코더 품질 튜닝 값. ffmpeg adapter에서는 cq 값 조정에 사용한다. 낮을수록 고품질이다."
+              "description": "GPU 인코더 품질 튜닝 값. 변환 구현에서는 cq 값 조정에 사용한다. 낮을수록 고품질이다."
             }
           },
           "additionalProperties": false
@@ -102,7 +102,7 @@
               "type": "integer",
               "minimum": 1,
               "maximum": 63,
-              "description": "CPU 인코더 품질 튜닝 값. ffmpeg adapter에서는 crf 값 조정에 사용한다. 낮을수록 고품질이다."
+              "description": "CPU 인코더 품질 튜닝 값. 변환 구현에서는 crf 값 조정에 사용한다. 낮을수록 고품질이다."
             }
           },
           "additionalProperties": false
@@ -158,9 +158,22 @@
         },
         "sizing_policy": {
           "type": "string",
-          "enum": ["fit", "cover", "stretch", "original"],
-          "default": "fit",
-          "description": "원본 크기를 목표 해상도에 맞추는 방식."
+          "enum": [
+            "fit",
+            "fit_to_orientation",
+            "fill",
+            "stretch",
+            "center_crop",
+            "fit_no_upscale",
+            "fill_no_upscale",
+            "fit_to_orientation_no_upscale"
+          ],
+          "description": "원본을 목표 해상도에 맞추는 방식. FFmpeg scale/crop/pad 필터를 결정할 때 사용한다."
+        },
+        "padding_policy": {
+          "type": "string",
+          "enum": ["no_pad", "pad"],
+          "description": "sizing_policy 처리 중 남는 영역을 패딩할지 여부. no_pad는 패딩을 추가하지 않는 운영 기본 동작이고, pad는 목표 해상도까지 레터박스 패딩을 추가한다."
         }
       },
       "additionalProperties": false
