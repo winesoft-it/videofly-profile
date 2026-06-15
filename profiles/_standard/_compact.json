@@ -1,0 +1,91 @@
+{
+  "schema_version": "v1",
+  "name": "compact",
+  "description": "용량 중심 profile (aggressive compression). 720p AV1 only + 480p/360p 저용량 래더.",
+  "renditions": [
+    {
+      "name": "fmp4_720p",
+      "container": "fmp4",
+      "audio": {
+        "codec": "aac",
+        "codec_options": {
+          "profile": "aac_low"
+        },
+        "channels": 2
+      },
+      "video": {
+        "codec": "av1",
+        "gpu": {
+          "preset": "p3",
+          "quality": 48
+        },
+        "cpu": {
+          "preset": "9",
+          "quality": 38
+        },
+        "codec_options": {
+          "profile": "main",
+          "level": "3.1"
+        },
+        "resolution": "1280x720",
+        "max_frame_rate": 30
+      }
+    },
+    {
+      "name": "fmp4_480p",
+      "container": "fmp4",
+      "audio": {
+        "codec": "aac",
+        "codec_options": {
+          "profile": "aac_low"
+        },
+        "channels": 2
+      },
+      "video": {
+        "codec": "av1",
+        "gpu": {
+          "preset": "p3",
+          "quality": 48
+        },
+        "cpu": {
+          "preset": "9",
+          "quality": 40
+        },
+        "codec_options": {
+          "profile": "main",
+          "level": "3.0"
+        },
+        "resolution": "854x480",
+        "max_frame_rate": 30
+      }
+    },
+    {
+      "name": "fmp4_360p",
+      "container": "fmp4",
+      "audio": {
+        "codec": "aac",
+        "codec_options": {
+          "profile": "aac_low"
+        },
+        "channels": 2
+      },
+      "video": {
+        "codec": "av1",
+        "gpu": {
+          "preset": "p3",
+          "quality": 48
+        },
+        "cpu": {
+          "preset": "9",
+          "quality": 40
+        },
+        "codec_options": {
+          "profile": "main",
+          "level": "3.0"
+        },
+        "resolution": "640x360",
+        "max_frame_rate": 30
+      }
+    }
+  ]
+}
