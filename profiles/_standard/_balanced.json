@@ -1,0 +1,111 @@
+{
+  "schema_version": "v1",
+  "name": "balanced",
+  "description": "가성비 범용 profile (general purpose). 1080p ~ 360p 4단 ABR 래더.",
+  "renditions": [
+    {
+      "name": "fmp4_1080p",
+      "container": "fmp4",
+      "audio": { "codec": "aac", "codec_options": { "profile": "aac_low" }, "channels": 2 },
+      "video": {
+        "codec": "av1",
+        "gpu": { "preset": "p3", "quality": 40 },
+        "cpu": { "preset": "9", "quality": 32 },
+        "codec_options": { "profile": "main" },
+        "resolution": "1920x1080",
+        "max_frame_rate": 30
+      }
+    },
+    {
+      "name": "fmp4_720p",
+      "container": "fmp4",
+      "audio": { "codec": "aac", "codec_options": { "profile": "aac_low" }, "channels": 2 },
+      "video": {
+        "codec": "av1",
+        "gpu": { "preset": "p3", "quality": 40 },
+        "cpu": { "preset": "9", "quality": 33 },
+        "codec_options": { "profile": "main" },
+        "resolution": "1280x720",
+        "max_frame_rate": 30
+      }
+    },
+    {
+      "name": "fmp4_480p",
+      "container": "fmp4",
+      "audio": { "codec": "aac", "codec_options": { "profile": "aac_low" }, "channels": 2 },
+      "video": {
+        "codec": "av1",
+        "gpu": { "preset": "p3", "quality": 42 },
+        "cpu": { "preset": "9", "quality": 35 },
+        "codec_options": { "profile": "main" },
+        "resolution": "854x480",
+        "max_frame_rate": 30
+      }
+    },
+    {
+      "name": "fmp4_360p",
+      "container": "fmp4",
+      "audio": { "codec": "aac", "codec_options": { "profile": "aac_low" }, "channels": 2 },
+      "video": {
+        "codec": "av1",
+        "gpu": { "preset": "p3", "quality": 42 },
+        "cpu": { "preset": "9", "quality": 35 },
+        "codec_options": { "profile": "main" },
+        "resolution": "640x360",
+        "max_frame_rate": 30
+      }
+    },
+    {
+      "name": "m2ts_1080p",
+      "container": "m2ts",
+      "audio": { "codec": "aac", "codec_options": { "profile": "aac_low" }, "channels": 2 },
+      "video": {
+        "codec": "h264",
+        "gpu": { "quality": 35 },
+        "cpu": { "preset": "fast", "quality": 23 },
+        "codec_options": { "profile": "high", "level": "4.2" },
+        "resolution": "1920x1080",
+        "max_frame_rate": 30
+      }
+    },
+    {
+      "name": "m2ts_720p",
+      "container": "m2ts",
+      "audio": { "codec": "aac", "codec_options": { "profile": "aac_low" }, "channels": 2 },
+      "video": {
+        "codec": "h264",
+        "gpu": { "quality": 35 },
+        "cpu": { "preset": "fast", "quality": 23 },
+        "codec_options": { "profile": "main", "level": "3.1" },
+        "resolution": "1280x720",
+        "max_frame_rate": 30
+      }
+    },
+    {
+      "name": "m2ts_480p",
+      "container": "m2ts",
+      "audio": { "codec": "aac", "codec_options": { "profile": "aac_low" }, "channels": 2 },
+      "video": {
+        "codec": "h264",
+        "gpu": { "quality": 35 },
+        "cpu": { "preset": "fast", "quality": 23 },
+        "codec_options": { "profile": "main", "level": "3.0" },
+        "resolution": "854x480",
+        "max_frame_rate": 30
+      }
+    },
+    {
+      "name": "m2ts_360p",
+      "container": "m2ts",
+      "audio": { "codec": "aac", "codec_options": { "profile": "aac_low" }, "channels": 2 },
+      "video": {
+        "codec": "h264",
+        "gpu": { "quality": 33 },
+        "cpu": { "preset": "fast", "quality": 23 },
+        "codec_options": { "profile": "baseline", "level": "3.0" },
+        "resolution": "640x360",
+        "max_frame_rate": 30
+      }
+    }
+  ]
+}
