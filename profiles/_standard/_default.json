@@ -1,10 +1,16 @@
 {
   "schema_version": "v1",
+  "name": "_default",
   "description": "기본 VideoFly profile. fMP4는 AV1, MPEG2-TS는 H.264 rendition을 제공한다.",
+  "rendition_policy": {
+    "mode": "if_spec_mismatch",
+    "allow_upscale": false
+  },
   "hls": {
+    "version": 7,
     "path": "abs",
     "split": "loose",
-    "segment_duration": "2"
+    "segment_duration": 2
   },
   "renditions": [
     {
@@ -30,7 +36,8 @@
         "codec_options": {
           "profile": "main"
         },
-        "resolution": "1920x1080"
+        "resolution": "1920x1080",
+        "sizing_policy": "fit_to_orientation_no_upscale"
       }
     },
     {
@@ -56,7 +63,8 @@
         "codec_options": {
           "profile": "main"
         },
-        "resolution": "1280x720"
+        "resolution": "1280x720",
+        "sizing_policy": "fit_to_orientation_no_upscale"
       }
     },
     {
@@ -82,7 +90,8 @@
         "codec_options": {
           "profile": "main"
         },
-        "resolution": "640x360"
+        "resolution": "640x360",
+        "sizing_policy": "fit_to_orientation_no_upscale"
       }
     },
     {
@@ -108,7 +117,8 @@
         "codec_options": {
           "profile": "main"
         },
-        "resolution": "256x144"
+        "resolution": "256x144",
+        "sizing_policy": "fit_to_orientation_no_upscale"
       }
     },
     {
@@ -134,7 +144,8 @@
           "profile": "high",
           "level": "4.2"
         },
-        "resolution": "1920x1080"
+        "resolution": "1920x1080",
+        "sizing_policy": "fit_to_orientation_no_upscale"
       }
     },
     {
@@ -160,7 +171,8 @@
           "profile": "main",
           "level": "3.1"
         },
-        "resolution": "1280x720"
+        "resolution": "1280x720",
+        "sizing_policy": "fit_to_orientation_no_upscale"
       }
     },
     {
@@ -186,7 +198,8 @@
           "profile": "baseline",
           "level": "3.0"
         },
-        "resolution": "640x360"
+        "resolution": "640x360",
+        "sizing_policy": "fit_to_orientation_no_upscale"
       }
     },
     {
@@ -212,8 +225,10 @@
           "profile": "baseline",
           "level": "2.0"
         },
-        "resolution": "256x144"
+        "resolution": "256x144",
+        "sizing_policy": "fit_to_orientation_no_upscale"
       }
     }
   ]
 }
+
