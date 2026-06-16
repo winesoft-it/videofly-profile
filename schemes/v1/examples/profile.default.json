@@ -1,0 +1,67 @@
+{
+  "schema_version": "v1",
+  "name": "_default",
+  "description": "VideoFly profile v1 기본값 설정.",
+  "rendition_policy": {
+    "mode": "if_spec_mismatch",
+    "allow_upscale": false
+  },
+  "hls": {
+    "version": 7,
+    "path": "abs",
+    "split": "loose",
+    "segment_duration": 2
+  },
+  "playout": {
+    "enable": false,
+    "items": []
+  },
+  "live": {
+    "enable": false,
+    "buffer": 30,
+    "denial_code": 403
+  },
+  "encrypt": {
+    "enable": false,
+    "key_file_name": "enc.key",
+    "token": "",
+    "token_type": "raw",
+    "iv": null
+  },
+  "event": {},
+  "renditions": [
+    {
+      "name": "fmp4_720p",
+      "container": "fmp4",
+      "audio": {
+        "enable": true,
+        "codec": "aac",
+        "codec_options": {
+          "profile": "aac_low"
+        },
+        "sample_rate": 48000,
+        "channels": 2
+      },
+      "video": {
+        "enable": true,
+        "codec": "av1",
+        "gpu": {
+          "preset": "p3",
+          "quality": 40
+        },
+        "cpu": {
+          "preset": "9",
+          "quality": 33
+        },
+        "codec_options": {
+          "profile": "main",
+          "level": "3.1",
+          "chroma_subsampling": "auto"
+        },
+        "resolution": "1280x720",
+        "sizing_policy": "fit_to_orientation_no_upscale",
+        "padding_policy": "no_pad"
+      }
+    }
+  ]
+}
