@@ -2,24 +2,15 @@
   "schema_version": "v1",
   "name": "_default",
   "description": "VideoFly profile v1 기본값 설정.",
-  "rendition_policy": {
-    "mode": "if_spec_mismatch",
-    "allow_upscale": false
-  },
   "hls": {
+    "transcode": {
+      "policy": "if_spec_mismatch",
+      "upscale": false
+    },
     "version": 7,
     "path": "abs",
     "split": "loose",
     "segment_duration": 2
-  },
-  "playout": {
-    "enable": false,
-    "items": []
-  },
-  "live": {
-    "enable": false,
-    "buffer": 30,
-    "denial_code": 403
   },
   "encrypt": {
     "enable": false,
@@ -28,7 +19,10 @@
     "token_type": "raw",
     "iv": null
   },
-  "event": {},
+  "composition": {
+    "enable": false,
+    "items": []
+  },
   "renditions": [
     {
       "name": "fmp4_720p",
