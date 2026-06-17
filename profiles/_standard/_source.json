@@ -10,8 +10,7 @@
         "enable": true
       },
       "video": {
-        "enable": true,
-        "sizing_policy": "original"
+        "enable": true
       }
     },
     {
@@ -21,8 +20,7 @@
         "enable": true
       },
       "video": {
-        "enable": true,
-        "sizing_policy": "original"
+        "enable": true
       }
     }
   ]
