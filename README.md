@@ -9,11 +9,14 @@ VideoFly에서 사용하는 비디오 프로파일 scheme을 관리하는 저장
 ```text
 schemes/
   v1/
+    profile.default.json
     schemas/
       profile.schema.json
       rendition.schema.json
     examples/
       profile.sample.json
+    docs/
+      profile-guide.md
 ```
 
 `{version}`은 `v1`, `v2`처럼 표기합니다.
@@ -21,7 +24,9 @@ schemes/
 ## 구성
 
 - `schemas/`: 해당 버전의 JSON Schema 파일을 둡니다.
+- `profile.default.json`: 해당 버전의 기본값 기준 profile 파일입니다.
 - `examples/`: 해당 버전의 샘플 profile 파일을 둡니다.
+- `docs/`: 해당 버전의 profile 작성 가이드 문서를 둡니다.
 
 ## 주요 개념
 

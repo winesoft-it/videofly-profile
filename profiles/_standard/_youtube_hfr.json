@@ -1,6 +1,5 @@
 {
   "schema_version": "v1",
-  "name": "youtube_hfr",
   "description": "YouTube HFR 스타일 profile. youtube 래더에 720p60 · 1080p60 rendition 추가. 고프레임 콘텐츠 대응.",
   "renditions": [
     {

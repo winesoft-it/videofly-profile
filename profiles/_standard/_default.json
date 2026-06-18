@@ -2,9 +2,14 @@
   "schema_version": "v1",
   "description": "기본 VideoFly profile. fMP4는 AV1, MPEG2-TS는 H.264 rendition을 제공한다.",
   "hls": {
+    "transcode": {
+      "policy": "if_spec_mismatch",
+      "upscale": false
+    },
+    "version": 7,
     "path": "abs",
     "split": "loose",
-    "segment_duration": "2"
+    "segment_duration": 2
   },
   "renditions": [
     {
@@ -217,3 +222,4 @@
     }
   ]
 }
+
