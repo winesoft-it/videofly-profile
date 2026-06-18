@@ -4,17 +4,12 @@
   "title": "Video Profile",
   "description": "VideoFly 출력 profile 정의. 하나의 profile은 공통 생성 정책, HLS 패키징 정책, encrypt 정책, composition 정책, rendition 출력을 포함한다.",
   "type": "object",
-  "required": ["schema_version", "name"],
+  "required": ["schema_version"],
   "properties": {
     "schema_version": {
       "type": "string",
       "const": "v1",
       "description": "video profile 스키마 버전."
-    },
-    "name": {
-      "type": "string",
-      "pattern": "^_?[a-z0-9][a-z0-9_.-]*$",
-      "description": "profile을 식별하는 고유 이름. VideoFly 기본 profile은 '_'로 시작할 수 있다. 예: _default, _youtube, _balance."
     },
     "description": {
       "type": "string",

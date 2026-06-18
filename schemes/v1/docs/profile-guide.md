@@ -17,7 +17,6 @@ Profile은 원본 입력의 출력을 기술한다.
 ```json
 {
   "schema_version": "v1",
-  "name": "_default",
   "description": "기본 VideoFly profile",
   "hls": {
     "transcode": {
@@ -49,10 +48,12 @@ Profile은 원본 입력의 출력을 기술한다.
 | 설정 | 설명 |
 | --- | --- |
 | `schema_version` | 현재 schema 버전은 반드시 `"v1"` 이어야한다. |
-| `name` | 이름. 기능적 정의는 없다. |
 | `description` | 설명. 기능적 정의는 없다. |
 | `hls` | HLS 제공 형태를 정의한다. |
 | `renditions` | Multivariant/rendition 출력에 대한 정의이다. |
+
+Profile 이름은 JSON 내부 필드가 아니라 파일명으로 결정한다.
+예를 들어 `_default.json` 파일의 profile 이름은 `_default`이다.
 
 ## 기본 Profile 상속
 

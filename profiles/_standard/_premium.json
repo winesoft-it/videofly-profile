@@ -1,6 +1,5 @@
 {
   "schema_version": "v1",
-  "name": "premium",
   "description": "고해상도 프리미엄 profile. 고품질 VOD/OTT 대응. 2160p(4K) ~ 720p 래더.",
   "renditions": [
     {

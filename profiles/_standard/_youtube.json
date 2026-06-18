@@ -1,6 +1,5 @@
 {
   "schema_version": "v1",
-  "name": "youtube",
   "description": "YouTube 스타일 MBR profile. 최대 30fps. 1440p ~ 144p ABR 래더.",
   "renditions": [
     {
