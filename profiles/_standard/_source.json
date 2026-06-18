@@ -1,6 +1,5 @@
 {
   "schema_version": "v1",
-  "name": "source",
   "description": "무변환 profile. 트랜스코딩 없이 원본 코덱 호환성만 보장하여 재생 가능하게 한다.",
   "renditions": [
     {
