@@ -137,6 +137,11 @@
               "type": "string",
               "enum": ["yuv420p", "yuv422p", "yuv444p", "nv12", "auto"],
               "description": "적용 가능한 경우 요청하는 chroma subsampling 또는 pixel format."
+            },
+            "interlace_mode": {
+              "type": "string",
+              "enum": ["auto", "progressive", "top_field_first", "bottom_field_first"],
+              "description": "출력 interlace 처리 방식. 생략하면 구현 기본 정책을 따른다."
             }
           },
           "additionalProperties": false
