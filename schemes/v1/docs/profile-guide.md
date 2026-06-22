@@ -198,8 +198,12 @@ AWS MediaConvert에는 유사 옵션이 있으나, VideoFly profile v1에서는 
 | --- | --- | --- |
 | `H264Settings.NumberReferenceFrames` | reference frame 수 | 인코더 세부 튜닝 값으로 보고 Profile에 포함하지 않는다. |
 | `H264Settings.EntropyEncoding` | CABAC/CAVLC 선택 | 인코더 정책으로 처리하고 Profile에 포함하지 않는다. |
-| `ColorCorrector.ColorSpaceConversion` | 색공간 변환 | codec option이 아니므로 Profile v1에서는 제공하지 않는다. |
+| `ColorCorrector.ColorSpaceConversion` | 색공간/컬러 매트릭스 변환 | codec option이 아니므로 Profile v1에서는 제공하지 않는다. |
 | fixed GOP, keyframe max distance | 키프레임/GOP 제어 | 별도 설정으로 제공하지 않고 `hls.split`, `segment_duration` 기준으로 처리한다. |
+
+색공간 변환은 출력 codec과 별개로 BT.709, BT.2020 같은 색공간을 강제로 맞춰야 할 때 사용한다.
+예를 들어 H.265 출력에서 SDR 호환을 위해 BT.709로 변환하거나, H.264 출력에서 원본 BT.2020 색공간을 유지/명시해야 하는 경우가 여기에 해당한다.
+H.264/H.265에서는 색공간 자체를 codec profile처럼 선택하는 것이 아니라, 인코딩 전 필터로 픽셀 값을 변환하고 bitstream에는 color primaries, transfer characteristics, matrix coefficients 같은 색상 메타데이터가 기록되는 형태로 사용된다.
 
 ## Sizing/Padding 설정
 
