@@ -20,7 +20,7 @@
         },
         "cpu": {
           "preset": "9",
-          "quality": 32
+          "quality": 36
         },
         "codec_options": {
           "profile": "main"
@@ -47,7 +47,7 @@
         },
         "cpu": {
           "preset": "9",
-          "quality": 33
+          "quality": 37
         },
         "codec_options": {
           "profile": "main"
@@ -74,7 +74,7 @@
         },
         "cpu": {
           "preset": "9",
-          "quality": 35
+          "quality": 38
         },
         "codec_options": {
           "profile": "main"
@@ -101,7 +101,7 @@
         },
         "cpu": {
           "preset": "9",
-          "quality": 35
+          "quality": 40
         },
         "codec_options": {
           "profile": "main"
@@ -127,7 +127,7 @@
         },
         "cpu": {
           "preset": "fast",
-          "quality": 23
+          "quality": 28
         },
         "codec_options": {
           "profile": "high",
@@ -154,7 +154,7 @@
         },
         "cpu": {
           "preset": "fast",
-          "quality": 23
+          "quality": 28
         },
         "codec_options": {
           "profile": "main",
@@ -181,7 +181,7 @@
         },
         "cpu": {
           "preset": "fast",
-          "quality": 23
+          "quality": 28
         },
         "codec_options": {
           "profile": "main",
@@ -208,7 +208,7 @@
         },
         "cpu": {
           "preset": "fast",
-          "quality": 23
+          "quality": 28
         },
         "codec_options": {
           "profile": "baseline",
