@@ -176,6 +176,7 @@ AAC-LC는 `aac_low`를 사용한다.
 | `codec_options.max_bitrate` | 최대 video bitrate(bps)이다. | `-maxrate`, `-bufsize` |
 | `codec_options.min_bitrate` | 최소 video bitrate(bps)이다. | `-minrate` |
 | `codec_options.chroma_subsampling` | pixel format이다. 예: `yuv420p`, `nv12`, `auto`. | `-pix_fmt` |
+| `codec_options.interlace_mode` | interlace 처리 방식이다. 예: `progressive`, `top_field_first`. | `-field_order` |
 | `bit_rate` | 목표 video bitrate(bps)이다. | `-b:v` |
 | `frame_rate` | 출력 frame rate(fps)이다. | `fps` filter |
 | `max_frame_rate` | 최대 출력 frame rate(fps)이다. | `-fpsmax` |
@@ -188,6 +189,17 @@ CPU/GPU 실행 환경에 따라 실제 encoder는 달라질 수 있다.
 
 Quality 값은 bitrate보다 우선하는 운영 기본 정책이다.
 `bit_rate`, `max_bitrate`, `min_bitrate`는 필요한 경우에만 사용하는 override 성격의 optional 값이다.
+
+## AWS MediaConvert 유사 옵션 처리 기준
+
+AWS MediaConvert에는 유사 옵션이 있으나, VideoFly profile v1에서는 다음 항목을 고객 설정값으로 제공하지 않는다.
+
+| AWS 옵션 | 유사 개념 | Profile v1 처리 |
+| --- | --- | --- |
+| `H264Settings.NumberReferenceFrames` | reference frame 수 | 인코더 세부 튜닝 값으로 보고 Profile에 포함하지 않는다. |
+| `H264Settings.EntropyEncoding` | CABAC/CAVLC 선택 | 인코더 정책으로 처리하고 Profile에 포함하지 않는다. |
+| `ColorCorrector.ColorSpaceConversion` | 색공간 변환 | codec option이 아니므로 Profile v1에서는 제공하지 않는다. |
+| fixed GOP, keyframe max distance | 키프레임/GOP 제어 | 별도 설정으로 제공하지 않고 `hls.split`, `segment_duration` 기준으로 처리한다. |
 
 ## Sizing/Padding 설정
 
